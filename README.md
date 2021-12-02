@@ -20,7 +20,7 @@ A BOT TO DOWNLOAD SONGS FROM YOUTUBE.
 # Credits 
 
 - [Oxidisedman](https://github.com/Oxidisedman). 
-- [MuhammedRk](https://github.com/PR0FESS0R-99). 
+- [Muhammed](https://github.com/PR0FESS0R-99). 
 - [Pyrogram](https://github.com/pyrogram/pyrogram) and For [Me](https://github.com/MR-JINN-OF-TG). 
 
 
