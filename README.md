@@ -19,9 +19,9 @@ A BOT TO DOWNLOAD SONGS FROM YOUTUBE.
 
 # Credits 
 
-- Oxidisedman
-- MuhammedRk
-- Pyrogram and For Me. 
+- [Oxidisedman](https://github.com/Oxidisedman). 
+- [MuhammedRk](https://github.com/PR0FESS0R-99). 
+- [Pyrogram](https://github.com/pyrogram/pyrogram) and For [Me](https://github.com/MR-JINN-OF-TG). 
 
 
 # Deploy To Heroku
@@ -36,3 +36,6 @@ A BOT TO DOWNLOAD SONGS FROM YOUTUBE.
 </details>
 
 
+# support Group
+
+- [Click Here To Reach Our Support Group](https://t.me/NAZRIYASUPPORT) 
