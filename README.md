@@ -14,6 +14,7 @@ A BOT TO DOWNLOAD SONGS FROM YOUTUBE.
 # Feautures 
 
 - Song Downloader. 
+- Lyrics scrapping. 
 - Inline YouTube serch. 
 - Broadcast Message To users. 
 
