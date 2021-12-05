@@ -4,6 +4,7 @@
 import logging
 logger = logging.getLogger(__name__)
 import os
+import re
 import time
 import math
 import json
@@ -329,5 +330,23 @@ async def broadcast_(c, m):
     
     await aiofiles.os.remove('broadcast.txt')
 
+@Bot.on_message(filters.command("lyrics"))
+async def lrsearch(_, message: Message):  
+    m = await message.reply_text("Searching Lyrics")
+    query = message.text.split(None, 1)[1]
+    x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
+    y = lyricsgenius.Genius(x)
+    y.verbose = False
+    S = y.search_song(query, get_full_info=False)
+    if S is None:
+        return await m.edit("Lyrics not found..🙃😔.")
+    xxx = f"""
+**Lyrics Search Powered By Music Bot**
+**Searched Song:-** __{query}__
+**Found Lyrics For:-** __{S.title}__
+**Artist:-** {S.artist}
+**__Lyrics:__**
+{S.lyrics}"""
+    await m.edit(xxx)
 
 Bot.run()
