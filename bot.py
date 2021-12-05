@@ -21,6 +21,8 @@ import lyricsgenius
 from config import Config
 from random import choice 
 from pyrogram import Client, filters
+from json import JSONDecodeError
+from shazamio import Shazam
 from youtube_search import YoutubeSearch
 from youtubesearchpython import VideosSearch
 from database import Database
