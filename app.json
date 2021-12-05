@@ -23,7 +23,7 @@
         "API_ID": {
             "description": "Your API ID from my.telegram.org",
             "value": ""
-        }
+        }, 
         "OWNER_ID": {
             "description": "Your id for broadcasting messages to users. Only you can broadcast message.",
             "value": ""
