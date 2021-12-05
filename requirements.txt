@@ -10,3 +10,5 @@ aiofiles
 dnspython
 pymongo
 lyricsgenius
+wget
+git+https://github.com/starkgang/shazamio
