@@ -2,6 +2,7 @@
     "name": "Song-Downloader-Bot",
     "description": "A BOT TO DOWNLOAD MUSIC FROM YOUTUBE.",
     "logo": "https://telegra.ph/file/745badebb188c6da28a67.jpg",
+    "stack": "container",
     "keywords": [
         "song",
         "youtube",
@@ -21,26 +22,28 @@
             "value": ""
         },
         "API_ID": {
-            "description": "Your API ID from my.telegram.org",
+            "description": "Your APP ID from my.telegram.org",
             "value": ""
-        }, 
-         "DB_URI": {
-            "description": "Database Support For broadcasting.",
-            "value": ""
-        }, 
+        },
         "OWNER_ID": {
-            "description": "Your userid For Broadcasting. ",
+            "description": "Your Telegram Bot Token from @BotFather",
             "value": ""
-        }, 
+        },
+        "DB_URL": {
+            "description": "your Database url From mongodb for broadcasting.",
+            "value": ""
+        }
     },
     "addons": [],
     "buildpacks": [
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "heroku/python"
+        {
+            "url": "heroku/python"
         }
-      ]
-   }
-    
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
