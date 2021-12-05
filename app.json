@@ -29,7 +29,7 @@
             "description": "Your Telegram Bot Token from @BotFather",
             "value": ""
         },
-        "DB_URL": {
+        "DB_URI": {
             "description": "your Database url From mongodb for broadcasting.",
             "value": ""
         }
@@ -37,8 +37,10 @@
     "addons": [],
     "buildpacks": [
         {
-            "url": "heroku/python"
-        }
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
     ],
     "formation": {
         "worker": {
