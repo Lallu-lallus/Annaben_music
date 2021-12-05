@@ -81,7 +81,12 @@ START_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('CLOSE🔐', callback_data='close')
         ]]
     )
-CMDS_BUTTONS
+CMDS_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('HOME🏡', callback_data='home'),
+        InlineKeyboardButton('CLOSE🔐', callback_data='close')
+        ]]
+    )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('HOME🏡', callback_data='home'),
