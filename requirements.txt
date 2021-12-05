@@ -3,7 +3,7 @@ TgCrypto==1.2.2
 youtube_dl
 youtube_search_python
 youtube_search
-requests
+requests==2.20.0
 ffmpeg-python
 motor
 aiofiles
