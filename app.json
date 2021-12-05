@@ -2,6 +2,7 @@
     "name": "Song-Downloader-Bot",
     "description": "A BOT TO DOWNLOAD MUSIC FROM YOUTUBE.",
     "logo": "https://telegra.ph/file/745badebb188c6da28a67.jpg",
+    "stack": "container",
     "keywords": [
         "song",
         "youtube",
