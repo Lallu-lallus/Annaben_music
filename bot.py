@@ -44,6 +44,22 @@ Am a song(Music) Downloader Bot I Can Download Songs From YouTube and Would uplo
 Use /song Command To Download Songs.(eg:-/song Alone) .`
 """
 
+CMDS_TEXT = """
+`Here It is The List of Commamds and Its usage.`
+
+- /song - This Command is For Downloading Songs. 
+- /lyrics - This Command is For Scrapping Lyrics of a Song. 
+- Also You Can search videos via inline Mode on Bot. 
+
+`Exmples For Both Those Commands.`
+
+- /song [song name] or [youTube link]. 
+  [/song Alone]. 
+- /lyrics [song name]. 
+  [/lyrics alone] 
+
+"""
+
 ABOUT_TEXT = """
 - **Bot :** `Song Downloader`
 - **Creator :** [MR-JINN-OF-TG](https://Github.com/MR-JINN-OF-TG)
@@ -59,10 +75,13 @@ START_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('SUPPORT♻️', url='https://telegram.me/NAZRIYASUPPORT'), 
         InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat="")
         ],[
+        InlineKeyboardButton('HELP & USAGE⚙️', callback_data ='cmds') 
+        ],[
         InlineKeyboardButton('ABOUT📕', callback_data='about'),
         InlineKeyboardButton('CLOSE🔐', callback_data='close')
         ]]
     )
+CMDS_BUTTONS
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('HOME🏡', callback_data='home'),
@@ -76,6 +95,12 @@ async def cb_handler(bot, update):
         await update.message.edit_text(
             text=START_TEXT.format(update.from_user.mention),
             reply_markup=START_BUTTONS,
+            disable_web_page_preview=True
+        )
+    elif update.data == "cmds":
+        await update.message.edit_text(
+            text=CMDS_TEXT,
+            reply_markup=CMDS_BUTTONS,
             disable_web_page_preview=True
         )
     elif update.data == "about":
