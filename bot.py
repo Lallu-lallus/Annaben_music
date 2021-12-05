@@ -17,6 +17,7 @@ import aiofiles
 import aiofiles.os
 import requests
 import youtube_dl
+import lyricsgenius
 from config import Config
 from random import choice 
 from pyrogram import Client, filters
