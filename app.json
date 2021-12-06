@@ -33,6 +33,10 @@
             "description": "Your database url from mongodb.",
             "value": ""
         }
+        "SUPPORT": {
+            "description": "Your support chat Username Without @",
+            "value": "NAZRIYASUPPORT"
+        }
     },
     "addons": [],
     "buildpacks": [
