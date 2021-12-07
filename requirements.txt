@@ -10,3 +10,4 @@ aiofiles
 dnspython
 pymongo
 lyricsgenius
+wget
