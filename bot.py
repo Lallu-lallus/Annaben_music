@@ -42,9 +42,8 @@ Bot = Client(
 db = Database()
 
 START_TEXT = """ `Hai {}, 
-Am a song(Music) Downloader Bot I Can Download Songs From YouTube and Would upload into Telegram. 
-Use /song Command To Download Songs.(eg:-/song Alone) .`
-"""
+I'm sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
+ 𝙸 𝚌𝚊𝚗 𝚙𝚕𝚊𝚢 𝚛𝚊𝚍𝚒𝚘/𝚜𝚝𝚛𝚎𝚊𝚖𝚎 𝙰𝚗𝚍 𝙸 𝚊𝚖 𝚊𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 𝚢𝚝 𝚟𝚒𝚍𝚎𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚘𝚗𝚕𝚢 𝚠𝚘𝚛𝚔 𝚊𝚝 𝚖𝚞𝚜𝚒𝚌 𝚠𝚘𝚛𝚕𝚍 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ ❤️ 𝐵𝑦 @Lallu_tg!"""
 
 CMDS_TEXT = """
 `Here It is The List of Commamds and Its usage.`
