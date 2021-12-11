@@ -5,9 +5,9 @@ from pyrogram import (
 from pyrogram.types import (
     ChatPermissions
 )
-from plugins.help_func.admin_check import admin_check
-from plugins.help_func.extract_user import extract_user
-from plugins.help_func.string_handling import extract_time
+from Database.admin_check import admin_check
+from Database.extract_user import extract_user
+from Database.string_handling import extract_time
 
 
 @Client.on_message(filters.command("mute"))
@@ -33,7 +33,7 @@ async def mute_user(_, message):
             await message.reply_text(
                 "👍🏻 "
                 f"{user_first_name}"
-                " Lavender's mouth is shut! 🤐"
+                " ഇവന്റ വാ മണിച്ചിത്ര താഴുട്ടു പൂട്ടി ! 🤐"
             )
         else:
             await message.reply_text(
@@ -41,7 +41,7 @@ async def mute_user(_, message):
                 f"<a href='tg://user?id={user_id}'>"
                 "Of lavender"
                 "</a>"
-                " The mouth is closed! 🤐"
+                " അവന്റ വാ അടപ്പിച്ചിട്ടുണ്ട് 🙂"
             )
 
 
@@ -82,13 +82,13 @@ async def temp_mute_user(_, message):
     else:
         if str(user_id).lower().startswith("@"):
             await message.reply_text(
-                "Be quiet for a while! 😠"
+                ""Be quite for a while ! 😠 കൊറച്ചു നേരം മിണ്ടാതിരി അവിടെ 😠"
                 f"{user_first_name}"
                 f" muted for {message.command[1]}!"
             )
         else:
             await message.reply_text(
-                "Be quiet for a while! 😠"
+                "Be quite for a while ! 😠 കൊറച്ചു നേരം മിണ്ടാതിരി അവിടെ 😠"
                 f"<a href='tg://user?id={user_id}'>"
                 "Of lavender"
                 "</a>"
