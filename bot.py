@@ -163,13 +163,13 @@ def time_to_seconds(time):
 
 
 
-@Bot.on_message(filters.command(['song']))
+@Bot.on_message(filters.command(['song', 's']))
 def a(client, message):
     query = ''
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Searching... Please Wait...`')
+    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔🙂`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -193,28 +193,28 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[@NazriyaSongBot]" 
+            performer = f"[@filevx_bot]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
             print(e)
-            m.edit('**No Results Found With This Data!**')
+            m.edit('**𝐇𝐞𝐲 𝐦𝐚𝐧𝐡 𝐧𝐨𝐭 𝐟𝐨𝐮𝐧𝐝 𝐢𝐭 𝐬𝐨𝐫𝐫𝐲🤧🙂!**')
             return
     except Exception as e:
         m.edit(
-            "**Enter The Song Name with /song command.!**"
+            "**Enter The Song Name with /song OR /s command.!**"
         )
         print(str(e))
         return
-    m.edit("`AM...Uploading To TG now... Please Wait...`")
+    m.edit("`𝐀𝐦 𝐮𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔🙂`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'❍📖 <b>Title:</b> <a href="{link}">{title}</a>\n❍⌚ <b>Duration:</b> <code>{duration}</code>\n❍📤 <b>Uploaded By:</b> <a href="https://t.me/NazriyaSongBot">NazriyaSongBot</a>'
+        rep = f'❍📖 <b>Title:</b> <a href="{link}">{title}</a>\n❍⌚ <b>Duration:</b> <code>{duration}</code>\n❍📤 <b>Uploaded By:</b> <a href="https://t.me/Music_wrld_grp">MUSIC WORLD😉</a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
