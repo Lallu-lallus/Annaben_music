@@ -47,19 +47,9 @@ I'm sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ
 
 CMDS_TEXT = """
 `Here It is The List of Commamds and Its usage.`
-
-- /song - This Command is For Downloading Songs. 
-- /lyrics - This Command is For Scrapping Lyrics of a Song. 
-- Also You Can search videos via inline Mode on Bot. 
-
-`Exmples For Both Those Commands.`
-
-- /song [song name] or [youTube link]. 
-  [/song Alone]. 
-- /lyrics [song name]. 
-  [/lyrics alone] 
-
+Click the buttons and know the cmds and usage
 """
+
 SONG_TEXT = """
 SONG MODULE
 Song Download
