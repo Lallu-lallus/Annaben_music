@@ -362,7 +362,7 @@ async def broadcast_(c, m):
     
     await aiofiles.os.remove('broadcast.txt')
 
-@Bot.on_message(filters.command("lyrics", "l"))
+@Bot.on_message(filters.command("lyrics"))
 async def lrsearch(_, message: Message):  
     m = await message.reply_text("𝐀𝐌 𝐒𝐄𝐀𝐑𝐂𝐇𝐈𝐍𝐆 𝐋𝐘𝐑𝐈𝐂𝐒 𝐅𝐎𝐑 𝐘𝐎𝐔.....𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔🙂")
     query = message.text.split(None, 1)[1]
@@ -381,7 +381,7 @@ async def lrsearch(_, message: Message):
 {S.lyrics}"""
     await m.edit(xxx)
 
-@Client.on_message(filters.command(["video", "v"]))
+@Client.on_message(filters.command(["video"]))
 async def vsong(client, message: Message):
     urlissed = get_text(message)
 
