@@ -60,6 +60,18 @@ CMDS_TEXT = """
   [/lyrics alone] 
 
 """
+SONG_TEXT = """
+SONG MODULE
+Song Download
+Song Download Module, For Those Who Love Music
+
+🎈 Command
+
+• /song or /s (songname) - download song from yt servers.
+• /video or /v (songname) - download video from yt servers(video mode now not working sorry)
+
+Usage
+- working pm and groups
 
 ABOUT_TEXT = """
 - **𝐍𝐚𝐦𝐞 :** 𝐒𝐄𝐋𝐄𝐍𝐀 𝐆𝐎𝐌𝐄𝐒
@@ -84,6 +96,9 @@ START_BUTTONS = InlineKeyboardMarkup(
     )
 CMDS_BUTTONS = InlineKeyboardMarkup(
         [[
+        InlineKeyboardButton('sᴏɴɢ', callback_data='song'),
+        InlineKeyboardButton('ʟʏʀɪᴄs', callback_data='lyric')
+        ],[
         InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
         InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
         ]]
@@ -94,6 +109,11 @@ ABOUT_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
         ]]
     )
+SONG_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+        ]]
 
 @Bot.on_callback_query()
 async def cb_handler(bot, update):
@@ -115,6 +135,12 @@ async def cb_handler(bot, update):
             reply_markup=ABOUT_BUTTONS,
             disable_web_page_preview=True
         )
+    elif update.data == "song":
+        await update.message.edit_text(
+            text=SONG_TEXT,
+            reply_markup=SONG_BUTTONS,
+            disable_web_page_preview=True
+       )
     else:
         await update.message.delete()
 
