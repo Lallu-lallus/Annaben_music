@@ -127,7 +127,6 @@ async def start(bot, update):
     await update.reply_photo(
         photo="https://telegra.ph/file/8f06df481d8722f502855.jpg",
         caption=START_TEXT.format(update.from_user.mention),
-        disable_web_page_preview=True,
 	reply_markup=START_BUTTONS
     )
 
