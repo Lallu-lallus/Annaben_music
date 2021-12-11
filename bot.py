@@ -124,8 +124,9 @@ async def start(bot, update):
     if not await db.is_user_exist(update.from_user.id):
         await db.add_user(update.from_user.id)  
 
-    await update.reply_text(
-        text=START_TEXT.format(update.from_user.mention),
+    await update.reply_photo(
+        photo={Photo},
+        caption=START_TEXT.format(update.from_user.mention),
         disable_web_page_preview=True,
 	reply_markup=START_BUTTONS
     )
