@@ -43,7 +43,7 @@ db = Database()
 
 START_TEXT = """ `Hai {}, 
 I'm sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
- 𝙸 𝚌𝚊𝚗 𝚙𝚕𝚊𝚢 𝚛𝚊𝚍𝚒𝚘/𝚜𝚝𝚛𝚎𝚊𝚖𝚎 𝙰𝚗𝚍 𝙸 𝚊𝚖 𝚊𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 𝚢𝚝 𝚟𝚒𝚍𝚎𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚘𝚗𝚕𝚢 𝚠𝚘𝚛𝚔 𝚊𝚝 𝚖𝚞𝚜𝚒𝚌 𝚠𝚘𝚛𝚕𝚍 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ ❤️ 𝐵𝑦 @Lallu_tg!"""
+  𝙸 𝚊𝚖 𝚊 𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 𝚢𝚝 𝚟𝚒𝚍𝚎𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚊 𝚙𝚞𝚋𝚕𝚒𝚌 𝚋𝚘𝚝 𝚢𝚘𝚞 𝚊𝚍𝚍 𝚖𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝚖𝚎 𝚊𝚗 𝚊𝚍𝚖𝚒𝚗 𝚊𝚗𝚍 𝙸 𝚠𝚒𝚕𝚕 𝚜𝚎𝚗𝚍 𝚖𝚞𝚜𝚒𝚌𝚜 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ ❤️ 𝐵𝑦 @Lallu_tg!"""
 
 CMDS_TEXT = """
 `Here It is The List of Commamds and Its usage.`
@@ -62,10 +62,10 @@ CMDS_TEXT = """
 """
 
 ABOUT_TEXT = """
-- **Bot :** `Song Downloader`
-- **Creator :** [MR-JINN-OF-TG](https://Github.com/MR-JINN-OF-TG)
-- **Support :** [CLICK HERE](https://telegram.me/NAZRIYASUPPORT)
-- **Source :** [CLICK HERE](https://github.com/MR-JINN-OF-TG/Song-Downloader-Bot)
+- **𝐍𝐚𝐦𝐞 :** 𝐒𝐄𝐋𝐄𝐍𝐀 𝐆𝐎𝐌𝐄𝐒
+- **Creator :** [ʟᴀʟʟᴜᵗᵍ](https://Github.com/lallu_tg)
+- **Support :** [CLICK HERE](https://telegram.me/Annaben_support)
+- **Source :** [CLICK HERE](https://github.com/Lallu-lallus/musicia_bot)
 - **Language :** [Python3](https://python.org)
 - **Library :** [Pyrogram](https://pyrogram.org)
 - **Server :** [Heroku](https://heroku.com)
@@ -73,25 +73,25 @@ ABOUT_TEXT = """
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Support📕', url=f"https://telegram.me/{Config.SUPPORT}"), 
-        InlineKeyboardButton(text="SEARCH🔎", switch_inline_query_current_chat="")
+        InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url=f"https://telegram.me/{Config.SUPPORT}"), 
+        InlineKeyboardButton(text="sᴇᴀʀᴄʜ", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton('HELP & USAGE⚙️', callback_data ='cmds') 
+        InlineKeyboardButton('ʜᴇʟᴘ', callback_data ='cmds') 
         ],[
-        InlineKeyboardButton('ABOUT📕', callback_data='about'),
-        InlineKeyboardButton('CLOSE🔐', callback_data='close')
+        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
         ]]
     )
 CMDS_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('HOME🏡', callback_data='home'),
-        InlineKeyboardButton('CLOSE🔐', callback_data='close')
+        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('HOME🏡', callback_data='home'),
-        InlineKeyboardButton('CLOSE🔐', callback_data='close')
+        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
+        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
         ]]
     )
 
