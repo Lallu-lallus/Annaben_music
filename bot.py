@@ -84,7 +84,7 @@ START_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('😉SUPPORT😉', url=f"https://telegram.me/{Config.SUPPORT}"), 
         InlineKeyboardButton(text="🔎SEARCH🔍", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton('➕ADD ME TO YOUR GROUP➕', url='http://t.me/dqautofl_bot?startgroup=true) 
+        InlineKeyboardButton('➕ADD ME TO YOUR GROUP➕', url='http://t.me/dqautofl_bot?startgroup=true') 
         ],[
         InlineKeyboardButton('HELPℹ️', callback_data='help'),
         InlineKeyboardButton('🤔ABOUT🤔', callback_data='about')
