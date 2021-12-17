@@ -42,7 +42,7 @@ Bot = Client(
 db = Database()
 
 START_TEXT = """ `Hai {}, 
-I'm sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
+I'm ᴍᴀᴋʀɪ sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
   𝙸 𝚊𝚖 𝚊 𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 𝚢𝚝 𝚟𝚒𝚍𝚎𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚊 𝚙𝚞𝚋𝚕𝚒𝚌 𝚋𝚘𝚝 𝚢𝚘𝚞 𝚊𝚍𝚍 𝚖𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝚖𝚎 𝚊𝚗 𝚊𝚍𝚖𝚒𝚗 𝚊𝚗𝚍 𝙸 𝚠𝚒𝚕𝚕 𝚜𝚎𝚗𝚍 𝚖𝚞𝚜𝚒𝚌𝚜 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ ❤️ 𝐵𝑦 @Lallu_tg!"""
 
 CMDS_TEXT = """
@@ -65,7 +65,7 @@ Usage
 """
 
 ABOUT_TEXT = """
-- **𝐍𝐚𝐦𝐞 :** 𝐒𝐄𝐋𝐄𝐍𝐀 𝐆𝐎𝐌𝐄𝐒
+- **𝐍𝐚𝐦𝐞 :** 𝐌𝐀𝐊𝐑𝐈
 - **Creator :** [ʟᴀʟʟᴜᵗᵍ](https://Github.com/lallu_tg)
 - **Support :** [CLICK HERE](https://telegram.me/Annaben_support)
 - **Source :** [CLICK HERE](https://github.com/Lallu-lallus/musicia_bot)
@@ -142,7 +142,7 @@ async def start(bot, update):
         await db.add_user(update.from_user.id)  
 
     await update.reply_photo(
-        photo="https://telegra.ph/file/8f06df481d8722f502855.jpg",
+        photo="https://telegra.ph/file/5649d8111f0a45039e282.jpg",
         caption=START_TEXT.format(update.from_user.mention),
 	reply_markup=START_BUTTONS
     )
@@ -186,7 +186,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔🙂`')
+    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔[🙂](https://telegra.ph/file/5649d8111f0a45039e282.jpg)`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -210,7 +210,7 @@ def a(client, message):
             #     m.edit("Exceeded 30mins cap")
             #     return
 
-            performer = f"[@filevx_bot]" 
+            performer = f"[MAKRI'S SERVER]" 
             thumb_name = f'thumb{message.message_id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True)
             open(thumb_name, 'wb').write(thumb.content)
@@ -225,7 +225,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`𝐀𝐦 𝐮𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔🙂`")
+    m.edit("`𝐀𝐦 𝐮𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐚 𝐬𝐨𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔[🙂](https://telegra.ph/file/5649d8111f0a45039e282.jpg)`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
