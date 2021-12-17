@@ -98,7 +98,7 @@ CMDS_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('🎥YT VIDEO', callback_data='yt')
         ],[
         InlineKeyboardButton('🏡HOME', callback_data='home'),
-        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
+        InlineKeyboardButton('⚠️CLOSE', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
