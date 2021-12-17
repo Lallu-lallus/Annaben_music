@@ -64,6 +64,11 @@ Usage
 - working pm and groups
 """
 
+YT_TEXT = """
+🎸YOUTUBE VIDEO🎸
+you can also use inline for search YouTube video or song
+"""
+
 ABOUT_TEXT = """
 - **𝐍𝐚𝐦𝐞 :** 𝐌𝐀𝐊𝐑𝐈
 - **Creator :** [ʟᴀʟʟᴜᵗᵍ](https://Github.com/lallu_tg)
@@ -76,34 +81,44 @@ ABOUT_TEXT = """
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url=f"https://telegram.me/{Config.SUPPORT}"), 
-        InlineKeyboardButton(text="sᴇᴀʀᴄʜ", switch_inline_query_current_chat="")
+        InlineKeyboardButton('😉SUPPORT😉', url=f"https://telegram.me/{Config.SUPPORT}"), 
+        InlineKeyboardButton(text="🔎SEARCH🔍", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton('ʜᴇʟᴘ', callback_data ='cmds') 
+        InlineKeyboardButton('➕ADD ME TO YOUR GROUP➕', url='http://t.me/dqautofl_bot?startgroup=true) 
         ],[
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('HELPℹ️', callback_data='help'),
+        InlineKeyboardButton('🤔ABOUT🤔', callback_data='about')
         ]]
     )
 CMDS_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('sᴏɴɢ', callback_data='song'),
-        InlineKeyboardButton('ʟʏʀɪᴄs', callback_data='lyric')
+        InlineKeyboardButton('🎸SONG', callback_data='song'),
+        InlineKeyboardButton('🎶LYRICS', callback_data='lyric')
         ],[
-        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('🎥YT VIDEO', callback_data='yt')
+        ],[
+        InlineKeyboardButton('🏡HOME', callback_data='home'),
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('🏡HOME', callback_data='home'),
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
         ]]
     )
 SONG_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('🏡HOME', callback_data='home'),
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
+        ]]
+    )
+YT_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🔎SEARCH🔍', switch_inline_query_current_chat="")
+        ],[
+        InlineKeyboardButton('🏡 HOME', callback_data='home'),
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
         ]]
     )
 @Bot.on_callback_query()
@@ -132,6 +147,12 @@ async def cb_handler(bot, update):
             reply_markup=SONG_BUTTONS,
             disable_web_page_preview=True
        )
+    elif update.data == "yt":
+        await update.message.edit_text(
+            text=YT_TEXT,
+            reply_markup=YT_BUTTONS,
+            disable_web_page_preview=True
+      )
     else:
         await update.message.delete()
 
