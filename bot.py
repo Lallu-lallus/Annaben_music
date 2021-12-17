@@ -86,7 +86,7 @@ START_BUTTONS = InlineKeyboardMarkup(
         ],[
         InlineKeyboardButton('➕ADD ME TO YOUR GROUP➕', url='http://t.me/dqautofl_bot?startgroup=true') 
         ],[
-        InlineKeyboardButton('HELPℹ️', callback_data='help'),
+        InlineKeyboardButton('HELPℹ️', callback_data='cmds'),
         InlineKeyboardButton('🤔ABOUT🤔', callback_data='about')
         ]]
     )
@@ -104,13 +104,13 @@ CMDS_BUTTONS = InlineKeyboardMarkup(
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏡HOME', callback_data='home'),
-        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='cmds')
         ]]
     )
 SONG_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('🏡HOME', callback_data='home'),
-        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='cmds')
         ]]
     )
 YT_BUTTONS = InlineKeyboardMarkup(
@@ -118,7 +118,7 @@ YT_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('🔎SEARCH🔍', switch_inline_query_current_chat="")
         ],[
         InlineKeyboardButton('🏡 HOME', callback_data='home'),
-        InlineKeyboardButton('🚶‍♀️BACK', callback_data='help')
+        InlineKeyboardButton('🚶‍♀️BACK', callback_data='cmds')
         ]]
     )
 @Bot.on_callback_query()
