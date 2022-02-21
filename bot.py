@@ -42,7 +42,7 @@ Bot = Client(
 db = Database()
 
 START_TEXT = """ `Hai {}, 
-I'm ᴍᴀᴋʀɪ sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
+I'm Cassy sᴏɴɢ ᴘʟᴀʏ ʙᴏᴛ 
   𝙸 𝚊𝚖 𝚊 𝚖𝚞𝚜𝚒𝚌 𝚋𝚘𝚝 𝚊𝚗𝚍 𝚢𝚝 𝚟𝚒𝚍𝚎𝚘 𝚍𝚘𝚠𝚗𝚕𝚘𝚊𝚍𝚎𝚛 𝚋𝚘𝚝 𝙸 𝚊𝚖 𝚊 𝚙𝚞𝚋𝚕𝚒𝚌 𝚋𝚘𝚝 𝚢𝚘𝚞 𝚊𝚍𝚍 𝚖𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚖𝚊𝚔𝚎 𝚖𝚎 𝚊𝚗 𝚊𝚍𝚖𝚒𝚗 𝚊𝚗𝚍 𝙸 𝚠𝚒𝚕𝚕 𝚜𝚎𝚗𝚍 𝚖𝚞𝚜𝚒𝚌𝚜 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝑀𝑎𝑑𝑒 𝑤𝑖𝑡ℎ ❤️ 𝐵𝑦 @Lallu_tg!"""
 
 CMDS_TEXT = """
@@ -70,7 +70,7 @@ you can also use inline for search YouTube video or song
 """
 
 ABOUT_TEXT = """
-- **𝐍𝐚𝐦𝐞 :** 𝐌𝐀𝐊𝐑𝐈
+- **𝐍𝐚𝐦𝐞 :** Cassy
 - **Creator :** [ʟᴀʟʟᴜᵗᵍ](https://Github.com/lallu_tg)
 - **Support :** [CLICK HERE](https://telegram.me/Annaben_support)
 - **Source :** [CLICK HERE](https://github.com/Lallu-lallus/musicia_bot)
@@ -84,7 +84,7 @@ START_BUTTONS = InlineKeyboardMarkup(
         InlineKeyboardButton('😉SUPPORT😉', url=f"https://telegram.me/{Config.SUPPORT}"), 
         InlineKeyboardButton(text="🔎SEARCH🔍", switch_inline_query_current_chat="")
         ],[
-        InlineKeyboardButton('➕ADD ME TO YOUR GROUP➕', url='http://t.me/dqautofl_bot?startgroup=true') 
+        InlineKeyboardButton('➕ADD ME TO YOUR GROUP➕', url='http://t.me/Filevx_bot?startgroup=true') 
         ],[
         InlineKeyboardButton('HELPℹ️', callback_data='cmds'),
         InlineKeyboardButton('🤔ABOUT🤔', callback_data='about')
@@ -207,7 +207,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔[🙂](https://telegra.ph/file/5649d8111f0a45039e282.jpg)`')
+    m = message.reply('`𝐒𝐞𝐚𝐫𝐜𝐡𝐢𝐧𝐠 𝐲𝐨𝐮𝐫 𝐬𝐨𝐧𝐠.... 𝐩𝐥𝐞𝐚𝐬𝐞 𝐰𝐚𝐢𝐭𝐞.... 𝐈 𝐋𝐔𝐁 𝐘𝐎𝐔[🙂](https://telegra.ph/file/5649d8111f0a45039e282.jpg) `')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
